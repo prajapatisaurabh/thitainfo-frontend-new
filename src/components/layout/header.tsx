@@ -5,8 +5,8 @@ const Header = () => {
     <header className="bg-gray-800 text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <div className="text-lg font-bold">
-          <Link href="/">LOGO Here</Link>
+        <div className="text-2xl font-bold font-mono">
+          <Link href="/">ThitaInfo</Link>
         </div>
 
         {/* Navigation */}

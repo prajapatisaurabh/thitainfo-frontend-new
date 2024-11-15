@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 
 const Hero = () => {
@@ -9,10 +10,11 @@ const Hero = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const period = 2000;
+  const router = useRouter();
 
   // Moving toRotate inside the useCallback function
   const tick = useCallback(() => {
-    const toRotate = ["Web Developer", "Full Stack Developer", "React Expert"]; // Define inside useCallback to prevent dependency changes
+    const toRotate = ["Web Developer", "Full Stack Developer", "React Expert"];
 
     const i = loopNum % toRotate.length;
     const fullText = toRotate[i];
@@ -67,7 +69,7 @@ const Hero = () => {
             solutions to help clients connect with their audience.
           </p>
           <button
-            onClick={() => alert("/navigate-contact")}
+            onClick={() => router.push("/contactus")}
             className="bg-primary text-white px-6 py-3 mt-4 rounded-lg hover:bg-hover-color transition duration-300"
           >
             Let’s Connect <span>→</span>
