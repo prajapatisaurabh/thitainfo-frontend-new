@@ -77,9 +77,11 @@ const Hero = () => {
         {/* Image Content */}
         <div className="lg:w-1/2 mt-10 lg:mt-0">
           <Image
-            src="headerImg" // Replace with your actual image path
+            src="/img/about/about.jpg"
             alt="Header Image"
             className="w-full rounded-lg shadow-lg"
+            width={50}
+            height={50}
           />
         </div>
       </div>

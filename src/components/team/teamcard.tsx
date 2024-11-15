@@ -64,6 +64,8 @@ const TeamCard = ({ obj }: { obj: TeamMember }) => {
             src={obj.img}
             alt={obj.name}
             className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-primary"
+            width={100}
+            height={100}
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
             <button className="bg-white text-primary px-4 py-2 rounded-lg shadow-lg font-semibold">

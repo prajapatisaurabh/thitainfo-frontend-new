@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import ContactInfo from "@/components/contactus/contactinfo";
+import Breadcrumbs from "@/components/layout/breadcrumb";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -52,23 +53,11 @@ const Contact = () => {
       //toast.error("Error sending message" + error.message);
     }
   };
-
+  const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Contact Us" }];
   return (
     <main id="main" className="bg-gray-50">
       {/* Breadcrumbs Section */}
-      <section id="breadcrumbs" className="bg-gray-100 py-4">
-        <div className="container mx-auto px-4">
-          <ol className="flex items-center space-x-2 text-sm text-gray-600">
-            <li>
-              <Link href="/" className="hover:text-primary">
-                Home
-              </Link>
-            </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-gray-800">Contact Us</li>
-          </ol>
-        </div>
-      </section>
+      <Breadcrumbs paths={breadcrumbs} />
 
       {/* Contact Section */}
       <section id="contact" className="py-16">
