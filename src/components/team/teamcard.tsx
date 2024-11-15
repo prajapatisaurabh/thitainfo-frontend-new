@@ -1,6 +1,8 @@
+import { TeamMember } from "@/types/team";
+import Image from "next/image";
 import React from "react";
 
-const TeamCard = ({ obj }: any) => {
+const TeamCard = ({ obj }: { obj: TeamMember }) => {
   return (
     <div
       id={`team-${obj.id}`}
@@ -58,7 +60,7 @@ const TeamCard = ({ obj }: any) => {
 
         {/* Image Section */}
         <div className="relative group">
-          <img
+          <Image
             src={obj.img}
             alt={obj.name}
             className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-primary"

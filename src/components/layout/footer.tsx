@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Footer = () => {
-  let year = new Date().getFullYear();
+  const year = new Date().getFullYear();
   return (
     <footer id="footer" className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">

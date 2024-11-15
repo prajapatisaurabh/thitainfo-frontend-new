@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -24,7 +25,7 @@ const About = () => (
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div>
-            <img
+            <Image
               src="assets/img/about.jpg"
               alt="About Us"
               className="rounded-lg shadow-lg"
@@ -74,15 +75,16 @@ const About = () => (
             <p className="text-gray-600">
               <Link href="/" className="text-primary font-bold hover:underline">
                 ThitaInfo
-              </Link>{" "}
+              </Link>
               is a dedicated team with a passion for developing and delivering
               enterprise-grade applications. With over 2+ years of experience,
               we have developed applications that are now being used by millions
               of consumers worldwide. We pride ourselves on understanding how to
-              build successful software products that not only meet our clients'
-              needs but also exceed their expectations. Our team's expertise and
-              commitment to quality enable us to deliver reliable and scalable
-              solutions to businesses of all sizes.
+              build successful software products that not only meet our
+              clients&apos; needs but also exceed their expectations. Our
+              team&apos;s expertise and commitment to quality enable us to
+              deliver reliable and scalable solutions to businesses of all
+              sizes.
             </p>
           </div>
         </div>

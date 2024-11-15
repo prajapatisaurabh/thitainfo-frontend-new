@@ -10,7 +10,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Form validation
@@ -48,7 +48,7 @@ const Contact = () => {
       //toast.success("Mail/Message sent successfully");
     } catch (error) {
       setLoading(false);
-      setError("Error sending message");
+      setError("Error sending message" + error);
       //toast.error("Error sending message" + error.message);
     }
   };

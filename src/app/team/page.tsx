@@ -1,8 +1,9 @@
 "use client";
 import TeamCard from "@/components/team/teamcard";
+import { TeamMember } from "@/types/team";
 import { useState } from "react";
 const Team = () => {
-  const TeamInfo = [
+  const TeamInfo: TeamMember[] = [
     {
       id: 1,
       name: "Saurabh Prajapati",

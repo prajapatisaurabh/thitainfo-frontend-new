@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import Image from "next/image";
+import { useState, useEffect, useCallback } from "react";
 
 const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -7,18 +8,12 @@ const Hero = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["we are thitacian", "we are thitacian", "we are thitacian"];
   const period = 2000;
 
-  useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
+  // Moving toRotate inside the useCallback function
+  const tick = useCallback(() => {
+    const toRotate = ["Web Developer", "Full Stack Developer", "React Expert"]; // Define inside useCallback to prevent dependency changes
 
-    return () => clearInterval(ticker);
-  }, [text]);
-
-  const tick = () => {
     const i = loopNum % toRotate.length;
     const fullText = toRotate[i];
     const updatedText = isDeleting
@@ -43,10 +38,17 @@ const Hero = () => {
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
-  };
+  }, [isDeleting, loopNum, period, text]);
+
+  useEffect(() => {
+    const ticker = setInterval(() => {
+      tick();
+    }, delta);
+    return () => clearInterval(ticker);
+  }, [tick, delta]);
 
   return (
-    <section id="hero" className="bg-gray-900 text-white py-20">
+    <section id="hero" className="bg-gray-900 text-white py-20" key={index}>
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between px-6">
         {/* Text Content */}
         <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
@@ -74,7 +76,7 @@ const Hero = () => {
 
         {/* Image Content */}
         <div className="lg:w-1/2 mt-10 lg:mt-0">
-          <img
+          <Image
             src="headerImg" // Replace with your actual image path
             alt="Header Image"
             className="w-full rounded-lg shadow-lg"
