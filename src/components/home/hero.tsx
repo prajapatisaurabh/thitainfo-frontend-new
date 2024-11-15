@@ -46,62 +46,39 @@ const Hero = () => {
   };
 
   return (
-    <section
-      id="hero"
-      style={{ backgroundColor: "#f4f4f4", padding: "60px 0" }}
-    >
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
-        <div
-          style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
-        >
-          <div style={{ flex: "1 1 50%", padding: "20px" }}>
-            <div>
-              <span
-                style={{ fontSize: "24px", color: "#888", display: "block" }}
-              >
-                Welcome to ThitaInfo
-              </span>
-              <h1>
-                Hi! <span style={{ color: "#007bff" }}>{text}</span>
-              </h1>
-              <p style={{ lineHeight: "1.6", color: "#555" }}>
-                Thita is a product-based company that specializes in web design,
-                mobile application development, and ERP application development.
-                Along with this, your company also provides tutorials on Java
-                and technical news to keep up with the latest trends in the
-                industry. Your blog section serves as a platform to share your
-                expertise and knowledge with the wider community. With a focus
-                on delivering cost-effective solutions and helping clients
-                connect with their target audience, your company strives to
-                thrive in the competitive digital world.
-              </p>
-              <button
-                onClick={() => alert("/navigae-contact")}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  padding: "10px 20px",
-                  fontSize: "16px",
-                  backgroundColor: "#007bff",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                }}
-              >
-                Let’s Connect <span style={{ marginLeft: "8px" }}>→</span>
-              </button>
-            </div>
-          </div>
-          <div
-            style={{ flex: "1 1 50%", padding: "20px", textAlign: "center" }}
+    <section id="hero" className="bg-gray-900 text-white py-20">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:justify-between px-6">
+        {/* Text Content */}
+        <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+          <span className="text-lg font-semibold text-primary">
+            Welcome to ThitaInfo
+          </span>
+          <h1 className="text-4xl lg:text-5xl font-bold">
+            Hi! <span className="text-primary">{text}</span>
+          </h1>
+          <p className="text-gray-300 leading-relaxed">
+            Thita is a product-based company that specializes in web design,
+            mobile application development, and ERP application development. We
+            provide tutorials on Java and technical news to keep up with the
+            latest trends. Our blog section serves as a platform to share
+            expertise with the community. We focus on delivering cost-effective
+            solutions to help clients connect with their audience.
+          </p>
+          <button
+            onClick={() => alert("/navigate-contact")}
+            className="bg-primary text-white px-6 py-3 mt-4 rounded-lg hover:bg-hover-color transition duration-300"
           >
-            <img
-              src={`headerImg`}
-              alt="Header Img"
-              style={{ maxWidth: "100%", height: "auto" }}
-            />
-          </div>
+            Let’s Connect <span>→</span>
+          </button>
+        </div>
+
+        {/* Image Content */}
+        <div className="lg:w-1/2 mt-10 lg:mt-0">
+          <img
+            src="headerImg" // Replace with your actual image path
+            alt="Header Image"
+            className="w-full rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </section>

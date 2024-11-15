@@ -3,89 +3,90 @@ import Link from "next/link";
 const Footer = () => {
   let year = new Date().getFullYear();
   return (
-    <footer id="footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <h4>Useful Links</h4>
-            <ul className="list-unstyled">
-              <li>
-                <Link href="/" className="text-decoration-none text-white">
+    <footer id="footer" className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Useful Links Section */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Useful Links</h4>
+            <ul>
+              <li className="mb-2">
+                <Link href="/" className="hover:text-primary transition">
                   Home
                 </Link>
               </li>
-              <li>
-                <Link href="/about" className="text-decoration-none text-white">
+              <li className="mb-2">
+                <Link href="/about" className="hover:text-primary transition">
                   About
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/service"
-                  className="text-decoration-none text-white"
-                >
+              <li className="mb-2">
+                <Link href="/service" className="hover:text-primary transition">
                   Services
                 </Link>
               </li>
-              <li>
-                <Link href="/team" className="text-decoration-none text-white">
+              <li className="mb-2">
+                <Link href="/team" className="hover:text-primary transition">
                   Team
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="text-decoration-none text-white">
+              <li className="mb-2">
+                <Link href="/blog" className="hover:text-primary transition">
                   Blog
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="col-md-4">
-            <h4>Contact Us</h4>
-            <ul className="list-unstyled">
-              <li>
+          {/* Contact Us Section */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
+            <ul>
+              <li className="mb-2">
                 <a
-                  href={`INSTAGRAM_URL`}
-                  className="text-decoration-none text-white"
+                  href="INSTAGRAM_URL"
                   target="_blank"
                   rel="noreferrer"
+                  className="hover:text-primary transition flex items-center"
                 >
-                  PUT-ICON LinkedinIn
+                  {/* Replace PUT-ICON with actual icon */}
+                  PUT-ICON LinkedIn
                 </a>
               </li>
-              <li>
+              <li className="mb-2">
                 <a
-                  href={`YOUTUBE_URL`}
+                  href="YOUTUBE_URL"
                   target="_blank"
-                  className="text-decoration-none text-white"
                   rel="noreferrer"
+                  className="hover:text-primary transition flex items-center"
                 >
-                  PUT-ICON Youtube
+                  PUT-ICON YouTube
                 </a>
               </li>
-              <li>
+              <li className="mb-2">
                 <a
                   href="tel:+918140202047"
-                  className="text-decoration-none text-white"
+                  className="hover:text-primary transition flex items-center"
                 >
-                  <i className="bi bi-telephone-fill me-2"></i> +91 81402 02047
+                  {/* Replace <i></i> with actual icon */}
+                  <i></i> +91 81402 02047
                 </a>
               </li>
-              <li>
+              <li className="mb-2">
                 <a
                   href="mailto:saurabhprajapati120.@gmail.com"
-                  className="text-decoration-none text-white"
+                  className="hover:text-primary transition flex items-center"
                 >
-                  <i className="bi bi-envelope-fill me-2"></i>{" "}
-                  saurabhprajapati120@gmail.com
+                  <i></i> saurabhprajapati120@gmail.com
                 </a>
               </li>
             </ul>
           </div>
 
-          <div className="col-md-4">
-            <h4>About Us</h4>
-            <p>
+          {/* About Us Section */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">About Us</h4>
+            <p className="text-gray-400">
               Thita Info is a new software development company that provides
               easy and cost-effective solutions for businesses to go online.
             </p>
@@ -93,12 +94,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="container py-3">
-        <div className="text-center">
-          <p className="mb-0">
+      <div className="border-t border-gray-700 mt-8 pt-4">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-500 text-sm">
             &copy; {year}-{year + 1} Thita. All Rights Reserved.
           </p>
-          <p className="mb-0">Designed by Thita Info</p>
+          <p className="text-gray-500 text-sm">Designed by Thita Info</p>
         </div>
       </div>
     </footer>

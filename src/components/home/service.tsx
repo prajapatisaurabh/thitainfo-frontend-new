@@ -48,19 +48,30 @@ const servicesData = [
 
 const ServiceSection = () => {
   return (
-    <section id="services" className="services">
-      <div>
-        <div>
+    <section id="services" className="services bg-gray-100 py-12">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
-            <div key={index}>
-              <div className="icon-box">
-                <div className="icon">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:-translate-y-2 hover:shadow-xl"
+            >
+              <div className="icon-box flex flex-col items-center">
+                <div className="icon text-primary text-4xl mb-4">
                   <i className={service.icon}></i>
                 </div>
-                <h4>
-                  <Link href={service.link}>{service.title}</Link>
+                <h4 className="text-xl font-semibold mb-2 text-gray-800">
+                  <Link
+                    href={service.link}
+                    className="hover:text-primary transition"
+                  >
+                    {service.title}
+                  </Link>
                 </h4>
-                <p>{service.description}</p>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             </div>
           ))}

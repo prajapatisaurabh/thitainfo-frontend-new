@@ -22,52 +22,108 @@ const Header = () => {
 
   const onUpdateActiveLink = (value: string) => {
     setActiveLink(value);
-    // Redirect is penfing
-    alert("redirect to " + value);
+    alert("Redirecting to " + value);
+    // Uncomment for navigation functionality
     // navigate("/" + value);
   };
 
   return (
-    <div>
-      <div>
-        <div onClick={() => onUpdateActiveLink("")}>LOGO Here</div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <a href="#home" onClick={() => onUpdateActiveLink("home")}>
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+        {/* Logo */}
+        <div
+          onClick={() => onUpdateActiveLink("")}
+          className="text-2xl font-bold text-white cursor-pointer"
+        >
+          LOGO Here
+        </div>
+
+        {/* Navigation Links */}
+        <nav className="flex items-center space-x-6 text-white">
+          <a
+            href="#home"
+            onClick={() => onUpdateActiveLink("home")}
+            className={`${
+              activeLink === "home" ? "text-primary font-semibold" : ""
+            } hover:text-primary transition`}
+          >
             Home
           </a>
-          <a href="#about" onClick={() => onUpdateActiveLink("about")}>
+          <a
+            href="#about"
+            onClick={() => onUpdateActiveLink("about")}
+            className={`${
+              activeLink === "about" ? "text-primary font-semibold" : ""
+            } hover:text-primary transition`}
+          >
             About
           </a>
-          <a href="#service" onClick={() => onUpdateActiveLink("service")}>
+          <a
+            href="#service"
+            onClick={() => onUpdateActiveLink("service")}
+            className={`${
+              activeLink === "service" ? "text-primary font-semibold" : ""
+            } hover:text-primary transition`}
+          >
             Service
           </a>
-          <a href="#team" onClick={() => onUpdateActiveLink("team")}>
+          <a
+            href="#team"
+            onClick={() => onUpdateActiveLink("team")}
+            className={`${
+              activeLink === "team" ? "text-primary font-semibold" : ""
+            } hover:text-primary transition`}
+          >
             Team
           </a>
-          <div style={{ position: "relative", display: "inline-block" }}>
-            <button>Learn</button>
-            <div>
-              <a href="#blog" onClick={() => onUpdateActiveLink("blog")}>
+
+          {/* Dropdown Menu */}
+          <div className="relative group">
+            <button className="hover:text-primary transition">Learn</button>
+            <div className="absolute left-0 hidden bg-gray-900 rounded-md shadow-lg group-hover:block mt-2">
+              <a
+                href="#blog"
+                onClick={() => onUpdateActiveLink("blog")}
+                className="block px-4 py-2 text-white hover:text-primary"
+              >
                 Blog
               </a>
-              <a href="#code" onClick={() => onUpdateActiveLink("code")}>
+              <a
+                href="#code"
+                onClick={() => onUpdateActiveLink("code")}
+                className="block px-4 py-2 text-white hover:text-primary"
+              >
                 Code With Me
               </a>
               <a
                 href="#interview"
                 onClick={() => onUpdateActiveLink("interview")}
+                className="block px-4 py-2 text-white hover:text-primary"
               >
                 Interview Preparation
               </a>
             </div>
           </div>
-          <a href="#contact" onClick={() => onUpdateActiveLink("contact")}>
+
+          <a
+            href="#contact"
+            onClick={() => onUpdateActiveLink("contact")}
+            className={`${
+              activeLink === "contact" ? "text-primary font-semibold" : ""
+            } hover:text-primary transition`}
+          >
             Contact Us
           </a>
-          <button>Login</button>
-        </div>
+          <button className="bg-primary text-white px-4 py-2 rounded hover:bg-hover-color transition">
+            Login
+          </button>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 
