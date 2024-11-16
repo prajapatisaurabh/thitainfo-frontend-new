@@ -50,8 +50,12 @@ export default function ContactUsForm() {
     try {
       const result = await postData("/api/contactus", formData);
       toast.success(result.message);
-    } catch (error: any) {
-      toast.error(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("An unknown error occurred");
+      }
     } finally {
       setIsLoading(false);
     }

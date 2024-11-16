@@ -1,4 +1,10 @@
-export const postData = async (url: string, data: any) => {
+type FormDataType = {
+  name: string;
+  email: string;
+  description: string;
+};
+
+export const postData = async (url: string, data: FormDataType) => {
   try {
     const response = await fetch(url, {
       method: "POST",

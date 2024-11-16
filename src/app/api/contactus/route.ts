@@ -23,13 +23,14 @@ export async function POST(request: NextRequest) {
       email,
       description,
     });
-    const savedForm = await contactForm.save();
+    await contactForm.save();
 
     return NextResponse.json(
       { message: "Form submitted successfully" },
       { status: 200 }
     );
-  } catch (error: unknown) {
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       {
         message: "Failed to submit form",
