@@ -13,7 +13,6 @@ export const postData = async (url: string, data: any) => {
     }
     return await response.json();
   } catch (error) {
-    console.log(error);
     throw error;
   }
 };
