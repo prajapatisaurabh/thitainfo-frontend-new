@@ -7,11 +7,13 @@ export const postData = async (url: string, data: any) => {
       },
       body: JSON.stringify(data),
     });
+    const res = await response.json();
 
     if (!response.ok) {
-      throw new Error("Failed to submit data");
+      throw new Error(res.message);
     }
-    return await response.json();
+
+    return res;
   } catch (error) {
     throw error;
   }

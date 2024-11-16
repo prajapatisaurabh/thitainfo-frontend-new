@@ -50,8 +50,8 @@ export default function ContactUsForm() {
     try {
       const result = await postData("/api/contactus", formData);
       toast.success(result.message);
-    } catch (error) {
-      console.error("Form submission error: " + error);
+    } catch (error: any) {
+      toast.error(error.message);
     } finally {
       setIsLoading(false);
     }
