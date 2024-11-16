@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaLinkedinIn, FaMobile, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -49,8 +51,8 @@ const Footer = () => {
                   rel="noreferrer"
                   className="hover:text-primary transition flex items-center"
                 >
-                  {/* Replace PUT-ICON with actual icon */}
-                  PUT-ICON LinkedIn
+                  <FaLinkedinIn className="text-lg mr-2 text-gray-600 hover:text-primary" />
+                  LinkedIn
                 </a>
               </li>
               <li className="mb-2">
@@ -60,7 +62,8 @@ const Footer = () => {
                   rel="noreferrer"
                   className="hover:text-primary transition flex items-center"
                 >
-                  PUT-ICON YouTube
+                  <FaYoutube className="text-lg mr-2 text-gray-600 hover:text-primary" />
+                  YouTube
                 </a>
               </li>
               <li className="mb-2">
@@ -68,8 +71,8 @@ const Footer = () => {
                   href="tel:+918140202047"
                   className="hover:text-primary transition flex items-center"
                 >
-                  {/* Replace <i></i> with actual icon */}
-                  <i></i> +91 81402 02047
+                  <FaMobile className="text-lg mr-2 text-gray-600 hover:text-primary" />
+                  +91 81402 02047
                 </a>
               </li>
               <li className="mb-2">
@@ -77,7 +80,8 @@ const Footer = () => {
                   href="mailto:saurabhprajapati120.@gmail.com"
                   className="hover:text-primary transition flex items-center"
                 >
-                  <i></i> saurabhprajapati120@gmail.com
+                  <BiLogoGmail className="text-lg mr-2 text-gray-600 hover:text-primary" />
+                  saurabhprajapati120@gmail.com
                 </a>
               </li>
             </ul>
