@@ -48,7 +48,7 @@ export default function ContactUsForm() {
     });
 
     try {
-      const result = await postData("/api/contactus", formData);
+      await postData("/api/contactus", formData);
       // toast.success(result.message);
     } catch (error: unknown) {
       if (error instanceof Error) {
