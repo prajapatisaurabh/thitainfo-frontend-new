@@ -1,6 +1,7 @@
 import { TeamMember } from "@/types/team";
 import Image from "next/image";
 import React from "react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const TeamCard = ({ obj }: { obj: TeamMember }) => {
   return (
@@ -22,7 +23,9 @@ const TeamCard = ({ obj }: { obj: TeamMember }) => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
-                <p>FaLinkedin ICON</p>
+                <p>
+                  <FaLinkedin />
+                </p>
               </a>
             )}
             {obj.twitter && (
@@ -32,7 +35,9 @@ const TeamCard = ({ obj }: { obj: TeamMember }) => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
-                <p>FaTwitter ICON</p>
+                <p>
+                  <FaTwitter />
+                </p>
               </a>
             )}
             {obj.instagram && (
@@ -42,7 +47,9 @@ const TeamCard = ({ obj }: { obj: TeamMember }) => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
-                <p>FaInstagram ICON</p>
+                <p>
+                  <FaInstagram />
+                </p>
               </a>
             )}
             {obj.facebook && (
@@ -52,7 +59,9 @@ const TeamCard = ({ obj }: { obj: TeamMember }) => {
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
-                <p>FaFacebook ICON</p>
+                <p>
+                  <FaFacebook />
+                </p>
               </a>
             )}
           </div>
