@@ -3,7 +3,7 @@ import { useState } from "react";
 import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { postData } from "@/utils/api";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 export default function ContactUsForm() {
   const [formData, setFormData] = useState({
@@ -49,12 +49,12 @@ export default function ContactUsForm() {
 
     try {
       const result = await postData("/api/contactus", formData);
-      toast.success(result.message);
+      // toast.success(result.message);
     } catch (error: unknown) {
       if (error instanceof Error) {
-        toast.error(error.message);
+        // toast.error(error.message);
       } else {
-        toast.error("An unknown error occurred");
+        // toast.error("An unknown error occurred");
       }
     } finally {
       setIsLoading(false);
