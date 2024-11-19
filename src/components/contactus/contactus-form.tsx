@@ -58,6 +58,11 @@ export default function ContactUsForm() {
       }
     } finally {
       setIsLoading(false);
+      setFormData({
+        name: "",
+        email: "",
+        description: "",
+      });
     }
   };
 
@@ -71,7 +76,7 @@ export default function ContactUsForm() {
         value={formData.name}
         onChange={handleChange}
         placeholder="Name"
-        className="border rounded px-3 py-2 w-full"
+        className="border rounded p-2 mb-2 w-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         error={errors.name}
       />
       <Input
@@ -80,7 +85,7 @@ export default function ContactUsForm() {
         value={formData.email}
         onChange={handleChange}
         placeholder="Email"
-        className="border rounded px-3 py-2 w-full"
+        className="border rounded p-2 mb-2 w-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         error={errors.email}
       />
       <Textarea
@@ -88,7 +93,7 @@ export default function ContactUsForm() {
         value={formData.description}
         onChange={handleChange}
         placeholder="Write something here..."
-        className="border rounded px-3 py-2 w-full"
+        className="border rounded p-2 mb-2 w-full bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         error={errors.description}
       />
       <button

@@ -26,7 +26,7 @@ export default function Input({
         placeholder={placeholder}
         className={`${className} ${error ? "border-red-500" : ""}`}
       />
-      {error && <p className="text-red-500 text-sm">{error}</p>}
+      {error && <p className="text-red-500 text-sm font-mono mb-2">{error}</p>}
     </div>
   );
 }

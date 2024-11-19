@@ -82,8 +82,8 @@ const Hero = () => {
             src="/img/about/about.jpg"
             alt="Header Image"
             className="w-full rounded-lg shadow-lg"
-            width={50}
-            height={50}
+            width={550}
+            height={550}
           />
         </div>
       </div>
