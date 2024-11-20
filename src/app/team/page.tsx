@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/layout/breadcrumb";
 import TeamCard from "@/components/team/teamcard";
 import { TeamMember } from "@/types/team";
 import { useState } from "react";
+import { teams } from "../constants/sociallinks";
 const Team = () => {
   const TeamInfo: TeamMember[] = [
     {
@@ -11,10 +12,10 @@ const Team = () => {
       role: "Full Stack Developer",
       disc: " Highly qualified and creative software engineer with experience in the industry. I would excel in the collaborative environment with cutting edge technology and modern cloud environment",
       img: "/img/team/team-1.png",
-      twitter: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      linkedin: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      instagram: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
-      facebook: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
+      twitter: teams.saurabh.LINKEDIN,
+      linkedin: teams.saurabh.LINKEDIN,
+      instagram: teams.saurabh.LINKEDIN,
+      facebook: teams.saurabh.LINKEDIN,
     },
     {
       id: 2,
@@ -22,10 +23,10 @@ const Team = () => {
       role: "Backend Developer",
       disc: " Highly qualified and creative software engineer with experience in the industry. I would excel in the collaborative environment with cutting edge technology and modern cloud environment",
       img: "/img/team/team-2.png",
-      linkedin: "https://www.linkedin.com/in/pradipsodha",
-      twitter: "https://www.linkedin.com/in/pradipsodha",
-      instagram: "https://www.linkedin.com/in/pradipsodha",
-      facebook: "https://www.linkedin.com/in/pradipsodha",
+      linkedin: teams.pradip.LINKEDIN,
+      twitter: teams.pradip.LINKEDIN,
+      instagram: teams.pradip.LINKEDIN,
+      facebook: teams.pradip.LINKEDIN,
     },
     {
       id: 3,
@@ -33,10 +34,10 @@ const Team = () => {
       role: "Frontend Developer",
       disc: " Highly qualified and creative software engineer with experience in the industry. I would excel in the collaborative environment with cutting edge technology and modern cloud environment",
       img: "/img/team/team-3.jpg",
-      linkedin: "https://www.linkedin.com/in/ysprajapati/",
-      twitter: "https://www.linkedin.com/in/ysprajapati/",
-      instagram: "https://www.linkedin.com/in/ysprajapati/",
-      facebook: "https://www.linkedin.com/in/ysprajapati/",
+      linkedin: teams.yash.LINKEDIN,
+      twitter: teams.yash.LINKEDIN,
+      instagram: teams.yash.LINKEDIN,
+      facebook: teams.yash.LINKEDIN,
     },
   ];
 

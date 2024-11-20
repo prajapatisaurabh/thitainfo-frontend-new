@@ -1,3 +1,4 @@
+import { teams } from "@/app/constants/sociallinks";
 import Link from "next/link";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaLinkedinIn, FaMobile, FaYoutube } from "react-icons/fa";
@@ -33,7 +34,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link href="/blog" className="hover:text-primary transition">
+                <Link href="/learn" className="hover:text-primary transition">
                   Blog
                 </Link>
               </li>
@@ -46,7 +47,7 @@ const Footer = () => {
             <ul>
               <li className="mb-2">
                 <a
-                  href="INSTAGRAM_URL"
+                  href={teams.saurabh.LINKEDIN}
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-primary transition flex items-center"
@@ -57,7 +58,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <a
-                  href="YOUTUBE_URL"
+                  href={teams.saurabh.YOUTUBE}
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-primary transition flex items-center"
