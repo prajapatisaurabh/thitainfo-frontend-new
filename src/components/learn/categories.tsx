@@ -1,0 +1,15 @@
+import Category from "./category";
+
+const Categories = ({ categories }: any) => {
+  return (
+    <div className="flex gap-6 mb-8">
+      {categories?.data?.map((category: any) => (
+        <div key={category.id}>
+          <Category cat={category} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Categories;
