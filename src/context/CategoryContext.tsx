@@ -2,22 +2,24 @@
 
 import { createContext, useState } from "react";
 
-// Define the shape of your context value
 interface CategoryContextType {
   category: string;
   changeCategory: (cat: string) => void;
 }
 
 export const CategoryContext = createContext<CategoryContextType>({
-  category: "", // Default category
-  changeCategory: () => {}, // Default function (no-op)
+  category: "ALL",
+  changeCategory: () => {},
 });
 
-export const CategoryProvide = ({ children }: any) => {
-  const [category, setCategory] = useState("ALL");
+export const CategoryProvide = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [category, setCategory] = useState<string>("ALL");
 
-  const changeCategory = (cat: any) => {
-    console.log("first : " + cat);
+  const changeCategory = (cat: string) => {
     setCategory(cat);
   };
   return (

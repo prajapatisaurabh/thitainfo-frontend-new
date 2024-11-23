@@ -2,15 +2,18 @@
 import { useContext } from "react";
 import BlogCard from "./blogcard";
 import { CategoryContext } from "@/context/CategoryContext";
+import { BlogPostType, BlogsType, CategoryType } from "@/types/learn";
 
-const Blogs = ({ blogs }: any) => {
+const Blogs = ({ blogs }: { blogs: BlogsType }) => {
   const { category } = useContext(CategoryContext);
 
   const filterBlogs =
     category === "ALL" || category === ""
       ? blogs.data
-      : blogs.data.filter((blog: any) => {
-          return blog.categories.some((cat: any) => cat.Title === category);
+      : blogs.data.filter((blog: BlogPostType) => {
+          return blog.categories.some(
+            (cat: CategoryType) => cat.Title === category
+          );
         });
 
   return (
@@ -24,7 +27,7 @@ const Blogs = ({ blogs }: any) => {
         </p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filterBlogs.map((blog: any) => (
+          {filterBlogs.map((blog: BlogPostType) => (
             <div
               key={blog.id}
               className="bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition-shadow duration-300"

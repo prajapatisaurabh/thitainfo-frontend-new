@@ -8,5 +8,7 @@ export const teams = {
   saurabh: {
     LINKEDIN: "https://www.linkedin.com/in/saurabh-prajapati-08b41915b/",
     YOUTUBE: "https://www.youtube.com/@thitashorts",
+    MOBILE_NO: "+91 81402 420**",
+    EMAIL: "saurabhprajapati120@gmail.com",
   },
 };

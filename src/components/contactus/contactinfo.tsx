@@ -1,3 +1,4 @@
+import { teams } from "@/app/constants/sociallinks";
 import React from "react";
 
 const ContactInfo = () => {
@@ -10,12 +11,12 @@ const ContactInfo = () => {
     {
       icon: <h3 className="text-primary text-2xl" />,
       title: "Phone",
-      detail: "+91 81402 42047",
+      detail: teams.saurabh.MOBILE_NO,
     },
     {
       icon: <h3 className="text-primary text-2xl" />,
       title: "Email",
-      detail: "saurabhprajapati120@gmail.com",
+      detail: teams.saurabh.EMAIL,
     },
   ];
 

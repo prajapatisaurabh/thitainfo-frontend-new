@@ -1,14 +1,13 @@
+import { BlogPostType } from "@/types/learn";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogCard = ({ blog }: any) => {
+const BlogCard = ({ blog }: { blog: BlogPostType }) => {
   const tuncateBlogDesc =
     blog.Description.length > 80
       ? blog.Description.substring(0, 80) + ". . . "
       : blog.Description;
 
-  console.log("first=====");
-  console.log(blog);
   const iamgeUrl = "http://localhost:1337" + blog.Image.formats.thumbnail.url;
   return (
     <div className="rounded-lg shadow-md p-4 mb-4 overflow-hidden border border-gray-600 cursor-pointer">
@@ -23,7 +22,7 @@ const BlogCard = ({ blog }: any) => {
           />
         </div>
         <div className="p-2">
-          <h2 className="text-xl font-semibold mb-2 overflow-ellipsis">
+          <h2 className="text-xl text-gray-800 font-semibold mb-2 overflow-ellipsis">
             {blog.Title}
           </h2>
           <p className="text-gray-600">{tuncateBlogDesc}</p>
