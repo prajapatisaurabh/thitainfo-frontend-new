@@ -20,9 +20,9 @@ async function fetchBlog(id: string) {
   }
 }
 
-const page = async ({ params }: { params: { id: string } }) => {
-  const { id } = await params;
-  const blog = await fetchBlog(id);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const page = async ({ params }: any) => {
+  const blog = await fetchBlog(params.id);
 
   const iamgeUrl =
     "http://localhost:1337" + blog.data.Image.formats.thumbnail.url;
